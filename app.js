@@ -1,7 +1,7 @@
 const style = document.createElement("style");
 style.textContent = `
   .header-mobile-button {
-    display: none;
+    display: flex;
     flex-shrink: 0;
     padding: 0;
     background: none;
@@ -34,9 +34,9 @@ style.textContent = `
     transform: translateY(-7px) rotate(45deg);
   }
 
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
     .header-mobile-button {
-      display: flex;
+      display: none;
     }
   }
 
@@ -44,7 +44,7 @@ style.textContent = `
     transition: color 200ms;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     .nav-bar {
       max-width: none;
       max-height: 0;
