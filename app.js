@@ -34,22 +34,32 @@ style.textContent = `
     transform: translateY(-7px) rotate(45deg);
   }
 
-  @media (min-width: 990px) {
+  @media (max-width: 989px) {
     .header-mobile-button {
       display: flex;
     }
 
     .nav-bar {
-      max-width: none;
-      max-height: 0;
-      overflow: hidden;
-      padding-left: 20px;
-      padding-right: 20px;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
+      display: none;
     }
+  }
+
+  @media (min-width: 990px) {
+    .header-mobile-button {
+      display: none;
+    }
+
+    .nav-bar {
+      display: flex;
+      max-height: none;
+      overflow: visible;
+      position: static;
+      flex-direction: row;
+    }
+  }
+
+  .nav-bar {
+    transition: max-height 0.3s ease, padding 0.3s ease;
   }
 
   .nav-link {
@@ -67,13 +77,20 @@ for (let i = 0; i < 3; i++) {
 const handleHeaderMobile = () => {
   const btn = document.querySelector(".header-mobile-button");
   const list = document.querySelector(".nav-bar");
+
   btn.addEventListener("click", () => {
     btn.classList.toggle("header-mobile-button-active");
+
     if (btn.classList.contains("header-mobile-button-active")) {
+      list.style.display = "flex";
+      list.style.flexDirection = "column";
       list.style.paddingTop = "20px";
       list.style.paddingBottom = "20px";
       list.style.maxHeight = "100vh";
-    } else list.style = "";
+    } else {
+      list.style = "";
+    }
   });
 };
+
 handleHeaderMobile();
