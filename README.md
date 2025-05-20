@@ -43,6 +43,7 @@ Since the styles are injected via JavaScript, use `!important` to make sure your
 .header-mobile-button span {
   background-color: red !important;
 }
+```
 
 ---
 
