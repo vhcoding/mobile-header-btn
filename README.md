@@ -16,7 +16,7 @@ It injects all styles directly via JavaScript, so **no external CSS file is requ
 2. **Add the script with `defer` in the header of your HTML**:
 
 ```html
-<script src="" defer></script>
+<script defer src="https://cdn.jsdelivr.net/gh/vhcoding/mobile-header-btn/app.js"></script>
 ```
 
 3. **Use `.nav-bar` as the class for your navigation container** and `.nav-link` for the links:
