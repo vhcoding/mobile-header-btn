@@ -34,7 +34,7 @@ style.textContent = `
     transform: translateY(-7px) rotate(45deg);
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: 1024px) {
     .header-mobile-button {
       display: flex;
     }

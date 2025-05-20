@@ -49,8 +49,8 @@ Since the styles are injected via JavaScript, use `!important` to make sure your
 
 ## 📱 Responsiveness
 
-- The `.header-mobile-button` appears only on screens **smaller than 991px**.
-- The `.nav-bar` navigation collapses automatically on screens **smaller than 768px** and switches to a vertical layout.
+- The `.header-mobile-button` appears only on screens **smaller than 1024px**.
+- The `.nav-bar` navigation collapses automatically on screens **smaller than 1024px** and switches to a vertical layout.
 - The button toggles the `.header-mobile-button-active` class to animate into an "X" icon.
 
 ---
