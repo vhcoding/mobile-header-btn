@@ -1,7 +1,7 @@
 const style = document.createElement("style");
 style.textContent = `
   .header-mobile-button {
-    display: flex;
+    display: none;
     flex-shrink: 0;
     padding: 0;
     background: none;
@@ -17,7 +17,7 @@ style.textContent = `
     width: 100%;
     height: 5px;
     border-radius: 4px;
-    background-color:#000000;
+    background-color: #000000;
     display: block;
     transition: 0.2s;
   }
@@ -34,17 +34,11 @@ style.textContent = `
     transform: translateY(-7px) rotate(45deg);
   }
 
-  @media (min-width: 1024px) {
+  @media (max-width: 1024px) {
     .header-mobile-button {
-      display: none;
+      display: flex;
     }
-  }
 
-  .nav-link {
-    transition: color 200ms;
-  }
-
-  @media (max-width: 1023px) {
     .nav-bar {
       max-width: none;
       max-height: 0;
@@ -56,6 +50,10 @@ style.textContent = `
       top: 100%;
       left: 0;
     }
+  }
+
+  .nav-link {
+    transition: color 200ms;
   }
 `;
 
