@@ -1,4 +1,3 @@
-// Criar o estilo dinamicamente
 const style = document.createElement("style");
 style.textContent = `
   .header-mobile-button {
