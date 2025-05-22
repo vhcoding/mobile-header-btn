@@ -40,21 +40,21 @@ style.textContent = `
     }
 
     .nav-bar {
-      display: none;
+      display: none !important; 
     }
   }
 
   @media (min-width: 990px) {
     .header-mobile-button {
-      display: none;
+      display: none !important;
     }
 
     .nav-bar {
-      display: flex;
-      max-height: none;
-      overflow: visible;
-      position: static;
-      flex-direction: row;
+      display: flex !important;
+      max-height: none !important;
+      overflow: visible !important;
+      position: static !important;
+      flex-direction: row !important;
     }
   }
 
