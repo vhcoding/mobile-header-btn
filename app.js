@@ -34,9 +34,9 @@ style.textContent = `
     transform: translateY(-7px) rotate(45deg);
   }
 
-  @media (max-width: 989px) {
+  @media (max-width: 1023px) {
     .header-mobile-button {
-      display: flex;
+      display: flex !important;
     }
 
     .nav-bar {
@@ -44,7 +44,7 @@ style.textContent = `
     }
   }
 
-  @media (min-width: 990px) {
+  @media (min-width: 1024px) {
     .header-mobile-button {
       display: none !important;
     }
