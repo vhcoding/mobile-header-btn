@@ -100,7 +100,11 @@ const handleHeaderMobile = () => {
       list.style.paddingTop = "20px";
       list.style.paddingBottom = "20px";
       list.style.maxHeight = "100vh";
-    } else list.style = "";
+    } else {
+      list.style.paddingTop = "";
+      list.style.paddingBottom = "";
+      list.style.maxHeight = "";
+    }
   });
 };
 handleHeaderMobile();
