@@ -16,15 +16,17 @@ It injects all styles directly via JavaScript, so **no external CSS file is requ
 2. **Add the script with `defer` in the header of your HTML**:
 
 ```html
-<script defer src="https://cdn.jsdelivr.net/gh/vhcoding/mobile-header-btn/app.min.js"></script>
+<script defer src="path/to/your-script.js"></script>
 ```
 
 3. **Use `.nav-bar` as the class for your navigation container** and `.nav-link` for the links:
 
 ```html
 <nav class="nav-bar">
-  <a href="#" class="nav-link">Home</a>
-  <a href="#" class="nav-link">About</a>
+  <a href="#" class="nav-link">Services</a>
+  <a href="#" class="nav-link">How it works</a>
+  <a href="#" class="nav-link">Plans</a>
+  <a href="#" class="nav-link">Extras</a>
 </nav>
 ```
 
@@ -49,8 +51,8 @@ Since the styles are injected via JavaScript, use `!important` to make sure your
 
 ## 📱 Responsiveness
 
-- The `.header-mobile-button` appears only on screens **smaller than 991x**.
-- The `.nav-bar` navigation collapses automatically on screens **smaller than 991px** and switches to a vertical layout.
+- The `.header-mobile-button` appears only on screens **smaller than 1024px**.
+- The `.nav-bar` collapses automatically on screens **smaller than 1024px** and switches to a vertical layout.
 - The button toggles the `.header-mobile-button-active` class to animate into an "X" icon.
 
 ---
@@ -60,7 +62,7 @@ Since the styles are injected via JavaScript, use `!important` to make sure your
 - ✅ No dependencies
 - ✅ CSS is included automatically
 - ✅ Smooth animations and responsive design built-in
-- ✅ Easy integration via CDN
+- ✅ Easy integration via script
 
 ---
 

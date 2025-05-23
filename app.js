@@ -40,7 +40,26 @@ style.textContent = `
     }
 
     .nav-bar {
-      display: none !important; 
+      width: calc(100% - 40px);
+      margin: 0 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden; 
+      max-height: 0;
+      max-width: none;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6.5px);
+      -webkit-backdrop-filter: blur(6.5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -50,11 +69,9 @@ style.textContent = `
     }
 
     .nav-bar {
-      display: flex !important;
-      max-height: none !important;
-      overflow: visible !important;
-      position: static !important;
-      flex-direction: row !important;
+      display: flex;
+      overflow: visible;
+      flex-direction: row;
     }
   }
 
@@ -77,20 +94,13 @@ for (let i = 0; i < 3; i++) {
 const handleHeaderMobile = () => {
   const btn = document.querySelector(".header-mobile-button");
   const list = document.querySelector(".nav-bar");
-
   btn.addEventListener("click", () => {
     btn.classList.toggle("header-mobile-button-active");
-
     if (btn.classList.contains("header-mobile-button-active")) {
-      list.style.display = "flex";
-      list.style.flexDirection = "column";
       list.style.paddingTop = "20px";
       list.style.paddingBottom = "20px";
       list.style.maxHeight = "100vh";
-    } else {
-      list.style = "";
-    }
+    } else list.style = "";
   });
 };
-
 handleHeaderMobile();
